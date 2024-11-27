@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><% title %></title>
+</head>
+
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+
+  <h1>ADD NEW MESSAGES</h1>
+  <form method="POST" action="/new">
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="messageText">Message:</label>
+    <input type="text" id="messageText" name="messageText" required>
+    <button>Submit</button>
+  </form>
+
+</body>
+
+</html>
