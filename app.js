@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/new", newMessageRouter);
-app.use("/", indexRouter.router);
+app.use("/", indexRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
