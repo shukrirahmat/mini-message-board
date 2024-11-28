@@ -4,21 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><% title %></title>
+  <link rel="stylesheet" href="/styles.css">
+  <title><%= title %></title>
 </head>
 
 <body>
 
   <%- include('./partials/nav.ejs') %>
 
-  <h1>ADD NEW MESSAGES</h1>
-  <form method="POST" action="/new">
-    <label for="username">Name:</label>
-    <input type="text" id="username" name="username" required>
-    <label for="messageText">Message:</label>
-    <input type="text" id="messageText" name="messageText" required>
-    <button>Submit</button>
-  </form>
+  <div class="mainContent">
+    <h1>ADD NEW MESSAGE</h1>
+    <form method="POST" action="/new">
+      <div>
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="messageText">Message:</label>
+        <textarea id="messageText" name="messageText" required></textarea>
+      </div>
+      <button>SUBMIT</button>
+    </form>
+  </div>
+
 
 </body>
 

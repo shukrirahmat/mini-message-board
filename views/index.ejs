@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
   <title><%= title %></title>
 </head>
 
@@ -11,18 +12,21 @@
 
   <%- include('./partials/nav.ejs') %>
 
-  <h1>MESSAGES</h1>
-  <div class="messageContainer">
-    <% if (messages.length) { %>
-    <% messages.forEach((message) => { %>
-    <div class="message">
-      <h2><%= message.user %></h2>
-      <p><%= message.text %></p>
-      <p><%= message.added %></p>
-    </div>
-    <% }); %>
-    <% } %>
+  <div class="mainContent">
+    <h1>MESSAGES</h1>
+    <ul class="messageContainer">
+      <% if (messages.length) { %>
+      <% messages.forEach((message, index) => { %>
+      <li class="message">
+        <p class="mname"><%= message.user %></p>
+        <p class="mtext"><%= message.text %></p>
+        <a href="<%= '/' + (index + 1) %>">OPEN</a>
+      </li>
+      <% }); %>
+      <% } %>
+    </ul>
   </div>
+
 
 </body>
 

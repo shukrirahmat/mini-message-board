@@ -1,4 +1,24 @@
-//This is where message page is
-// next task
-// add new get to the routes which used :id
-// also need to add styles
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title><%= title %></title>
+</head>
+
+<body>
+  <%- include('./partials/nav.ejs') %>
+
+  <div class="mainContent">
+    <div class="openedMessage">
+      <p><b>Author:</b>   <%= message.user %></p>
+      <p><b>Message:</b>   <%= message.text %></p>
+      <p><b>Date Added:</b>   <%= message.added.toLocaleString('en-US', { timeZoneName: 'short' }); %></p>
+      <a href="/">RETURN</a>
+    </div>
+  </div>
+</body>
+
+</html>
